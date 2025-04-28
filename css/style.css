@@ -1,0 +1,353 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #003366;
+  line-height: 1.6;
+  padding-top: 80px;
+    /* Espaço para a navbar fixa */
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #003366;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  z-index: 999;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo img {
+  height: 40px;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.imagem-inicial {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.imagem-inicial img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+.hero {
+  background-color: #e6f2ff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.section {
+  padding: 30px 20px;
+}
+
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.columns div {
+  flex: 1;
+  min-width: 250px;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.galeria {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.galeria img {
+  width: 280px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}
+
+.whatsapp-button {
+  display: inline-block;
+  background-color: #25d366;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #003366;
+  }
+
+  nav a {
+    padding: 10px;
+    border-top: 1px solid white;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+form {
+  background-color: #f4f8fb;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #ccddee;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+form button {
+  background-color: #003366;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background-color: #002244;
+}
+
+
+
+.banner-topo {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.banner-topo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.botoes-inicio {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.botao-personalizado {
+  padding: 15px 24px;
+  background-color: #003366;
+  color: white;
+  text-decoration: none;
+  border-radius: 17px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.botao-personalizado:hover {
+  background-color: #0055a5;
+}
+
+.voltar {
+  position: relative;
+  margin: 20px 0;
+}
+
+.botao-voltar {
+  padding: 10px 20px;
+  background-color: #003366;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.botao-voltar:hover {
+  background-color: #0055a5;
+}
+
+
+
+
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #003366;
+  color: white;
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #003366;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+
+.botao-personalizado i {
+  margin-right: 8px;
+  font-size: 18px;
+  vertical-align: middle;
+}
+
+p i {
+  margin-right: 8px;
+  color: #003366;
+  /* ou a cor desejada */
+}
+
+
+
+.redes-sociais-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 10px 0;
+}
+
+.rede-social {
+  text-align: center;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.rede-social i {
+  font-size: 2rem;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+.rede-social p {
+  margin: 0;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.rede-social:hover {
+  transform: scale(1.05);
+}
+
+.rede-social i.bi-facebook:hover {
+  color: #1877f2;
+}
+
+.rede-social i.bi-whatsapp:hover {
+  color: #25D366;
+}
+
+.rede-social i.bi-instagram:hover {
+  color: #C13584;
+}

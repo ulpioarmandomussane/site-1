@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="favicon.ico.jpg">
+    <title>Formações 2024 - Álbum</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Lightbox CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .back-btn {
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Botão Voltar -->
+    <div class="back-btn">
+        <a href="albums.html" class="btn btn-outline-primary">
+            <i class="bi bi-arrow-left"></i> Voltar aos Álbuns
+        </a>
+    </div>
+
+    <!-- Título -->
+    <div class="text-center mb-3">
+        <h2>Formações 2024</h2>
+        <p>Confira as fotos do nosso evento de formação</p>
+    </div>
+
+    <div class="gallery container">
+        <a href="Imagens/Foto 2.jpg" data-lightbox="formacoes" data-title="Turma 2024 - Aula inaugural">
+            <img src="Imagens/Foto 2.jpg" alt="Foto 1">
+        </a>
+
+        <a href="Imagens/foto 1.jpg" data-lightbox="formacoes" data-title="Foto 2">
+            <img src="Imagens/foto 1.jpg" alt="Foto 2">
+
+            <a href="Imagens/Foto 3.jpg" data-lightbox="formacoes" data-title="Foto 4">
+                <img src="Imagens/Foto 3.jpg" alt="Foto 4">
+            </a>
+
+            <a href="Imagens/Foto 4.jpg" data-lightbox="formacoes" data-title="Foto 4">
+                <img src="Imagens/Foto 4.jpg" alt="Foto 4">
+            </a>
+            <!-- Adicione mais fotos seguindo o mesmo padrão -->
+    </div>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Lightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
+</body>
+
+</html>
