@@ -66,37 +66,22 @@
 
 <section id="contato" class="container my-5">
   <h2 class="text-center mb-4">Envie-nos uma mensagem</h2>
-  <form action="https://formsubmit.io/send/ulpiomussane5@gmail.com" method="POST" class="row g-3">
+ <form id="form-contato" action="https://formsubmit.io/send/ulpiomussane5@gmail.com" method="POST">
+  <input type="hidden" name="_captcha" value="false"> <!-- Desativa CAPTCHA -->
+  
+  <input type="text" name="Nome" placeholder="Nome" required>
+  <input type="email" name="Email" placeholder="Email" required>
+  <input type="text" name="Assunto" placeholder="Assunto" required>
+  <textarea name="Mensagem" placeholder="Mensagem" required></textarea>
 
-    <div class="col-md-6">
-      <label for="nome" class="form-label">Nome</label>
-      <input type="text" class="form-control" id="nome" name="nome" required>
-    </div>
+  <button type="submit">Enviar Mensagem</button>
+</form>
 
-    <div class="col-md-6">
-      <label for="email" class="form-label">Email</label>
-      <input type="email" class="form-control" id="email" name="email" required>
-    </div>
+<!-- Mensagem de sucesso escondida -->
+<p id="mensagem-sucesso" style="display:none; color: green; font-weight: bold;">
+  ✅ Sua mensagem foi enviada com sucesso!
+</p>
 
-    <div class="col-12">
-      <label for="assunto" class="form-label">Assunto</label>
-      <input type="text" class="form-control" id="assunto" name="assunto" required>
-    </div>
-
-    <div class="col-12">
-      <label for="mensagem" class="form-label">Mensagem</label>
-      <textarea class="form-control" id="mensagem" name="mensagem" rows="5" required></textarea>
-    </div>
-
-    <div class="col-12 text-center">
-      <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
-    </div>
-
-    <!-- Parte oculta para configurações -->
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_next" value="https://obrigado.html.com/obrigado.html">
-
-  </form>
 </section>
 
     <h2>Contato</h2>
@@ -144,6 +129,33 @@
 
 
 <script src="js/script.js"></script>
+<script>
+  const form = document.getElementById('form-contato');
+  const mensagemSucesso = document.getElementById('mensagem-sucesso');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault(); // Evita que o formulário seja enviado da forma tradicional
+
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+      method: "POST",
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        form.reset();
+        mensagemSucesso.style.display = "block";
+      } else {
+        alert("Erro ao enviar. Tente novamente.");
+      }
+    }).catch(error => {
+      alert("Erro ao enviar. Tente novamente.");
+    });
+  });
+</script>
 
 </body>
 </html>
