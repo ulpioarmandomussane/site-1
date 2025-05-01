@@ -351,3 +351,7 @@ p i {
 .rede-social i.bi-instagram:hover {
   color: #C13584;
 }
+
+input, textarea {
+  font-size: 16px;
+}
