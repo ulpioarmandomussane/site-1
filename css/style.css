@@ -17,7 +17,6 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  max-width: 400px; /* ou o valor máximo que quiser */
   width: 100%;
   background-color: #003366;
   color: white;
@@ -351,12 +350,5 @@ p i {
 
 .rede-social i.bi-instagram:hover {
   color: #C13584;
-}
-
-input,
-textarea,
-select,
-button {
-  font-size: 16px;
 }
 
