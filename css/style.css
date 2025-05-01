@@ -352,6 +352,9 @@ p i {
   color: #C13584;
 }
 
-input, textarea {
+input,
+textarea,
+select,
+button {
   font-size: 16px;
 }
